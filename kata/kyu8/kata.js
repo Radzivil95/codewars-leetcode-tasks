@@ -188,3 +188,112 @@ Write a function that will take the number of petals of each flower and return t
 // console.log(isPythagoreanTriple([70, 18, 8]));
 // console.log(isPythagoreanTriple([3, 5, 9]));
 // console.log(isPythagoreanTriple([72, 78, 30]));
+
+///////////////////////////// 13 ////////////////////////
+
+/*
+Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
+
+Hint for R users:
+
+The length of string is not always the same as the number of characters
+*/
+
+// function solution(a, b){
+//     if (a.length > b.length) {
+//         return `${b}${a}${b}`;
+//     } else {
+//         return `${a}${b}${a}`;
+//     } 
+//   }
+
+// console.log(solution('45', '133'));
+
+
+///////////////////////////// 13 ////////////////////////
+
+/*
+Create a function with two arguments that will return an array of the first (n) multiples of (x).
+
+Assume both the given number and the number of times to count will be positive numbers greater than 0.
+
+Return the results as an array (or list in Python, Haskell or Elixir).
+
+Examples:
+*/
+
+// function countBy(x, n) {
+//     let z = [];
+//     let y = 0
+//     for( let i = 0; i < n; i++) {
+//         y = y + x;
+//         z.push(y);
+//     }
+//     return z;
+//   }
+
+// console.log(countBy(1,10));
+// console.log(countBy(2,5));
+
+///////////////////////////// 14 ////////////////////////
+
+// function twoSort(s) {
+//     s.sort();
+//     let x = [];
+//     let y = s[0];
+//     for (let i = 0; i < s[0].length; i++) {
+//         x.push(y[i]);
+//     }
+//     return x.join("***");
+// }
+
+// console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
+
+///////////////////////////// 15 ////////////////////////
+
+/*Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+
+I love you
+a little
+a lot
+passionately
+madly
+not at all
+When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+
+Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0. */
+
+// function howMuchILoveYou(nbPetals) {
+//     let x = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"];
+//     while (x.length < nbPetals) {
+//         x = x.concat(x);
+//     }
+//     return x[nbPetals - 1];
+// }
+
+// console.log(howMuchILoveYou(10));
+///////////////////////////// 16 ////////////////////////
+// function maps(x){
+//     let y = [];
+//     for (let i = 0; i < x.length; i++) {
+//         y.push(x[i] * 2);
+//     }
+//     return y;
+//   }
+
+// console.log([1, 2, 3]);
+
+// const array1 = ['a', 'b', 'c'];
+
+// array1.forEach(element => console.log(element));
+
+
+String.prototype.isUpperCase = function(a) {
+    if (a == a.toUpperCase()) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+console.log();
