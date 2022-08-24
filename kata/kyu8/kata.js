@@ -286,14 +286,3 @@ Your goal in this kata is to determine which phrase the girls would say for a fl
 // const array1 = ['a', 'b', 'c'];
 
 // array1.forEach(element => console.log(element));
-
-
-String.prototype.isUpperCase = function(a) {
-    if (a == a.toUpperCase()) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-console.log();
