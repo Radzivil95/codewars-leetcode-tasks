@@ -35,11 +35,3 @@ Your mission is to implement a function that converts the following potentially 
 
 
 
-String.prototype.isUpperCase = function() {
-    let str = "sds";
-    if (str == str.toUpperCase()) {
-      return true;
-    } else {
-      return false;
-    }
-}
