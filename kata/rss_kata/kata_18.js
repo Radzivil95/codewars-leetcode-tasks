@@ -22,4 +22,4 @@ function getParticipants(handshakes){
 
 //     return answer;
 // }
-console.log(getParticipants(7))
+console.log(typeof(alert()))
