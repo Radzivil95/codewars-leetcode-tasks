@@ -9,43 +9,38 @@ let obj = {
   another: '3',
   andit: [],
   andyou: [function(){}],
-  whatabout: { andone: 'and another', andtwo: 2, andthree: 'and again' },
+  whatabout: { andone: 'and another',
+   andtwo: 2, andthree: 'and again',
+   test: {
+    test: "dsd"
+  }},
   lastkey: [ [ [Array], false ], 0 ]
 }
 
 function strCount(obj){
-  let count = 0;
-  for (el in obj){
-    if (typeof(obj[el]) == 'object' && !Array.isArray(obj[el])) {
-      return isObj(obj[el]);
+  let total = 0;
+  for(let item of Object.values(obj)) {
+    
+    if(typeof(item) == 'string') {
+      total++;
+    } else if (item == null) {
+      continue
+    } else {
+      total += strCount(item);
     }
-    if(Array.isArray(obj[el])) {
-      for(let i = 0; i < obj[el].length; i++) {
-        if(typeof(obj[el][i]) == 'string') {
-          count++;
-        }
-      }
-    }
-    if(typeof(obj[el]) == 'string') {
-      count += 1;
-    }
-  }
-  return count + strCount();
+    
+  } 
+  return total;
 }
 
-function isObj(obj) {
-  let y = 0;
-    for(x in obj) {
-      if(typeof(obj[x]) == 'string') {
-        y += 1;
-      }
-    }
-  return y + isObj(obj);
-}
-
+console.log(typeof(null));
 console.log(strCount(obj));
 
-
+// else if(typeof(obj[item]) == 'object' && obj[item].length == 0) {
+//   if(typeof(obj[item]) == 'string') {
+//     strTotal.push(obj[item]);
+//   }
+//   return strTotal
 console.log(strCount({
   first:  "1",
   second: "2",
